@@ -6,7 +6,6 @@ Summary:        GNU m4
 Url:            http://www.gnu.org/software/m4/
 Group:          Development/Languages/Other
 Source:         http://ftp.gnu.org/pub/gnu/m4/%{name}-%{version}.tar.bz2
-Patch1:         m4-stdio.in.patch
 Provides:       base:/usr/bin/m4
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 
@@ -32,7 +31,7 @@ make %{?_smp_mflags} check || true
 
 %files
 %defattr(-,root,root)
-%doc README COPYING
+%doc COPYING
 %{_bindir}/*
 %doc %{_infodir}/*.gz
 %{_mandir}/*/*
