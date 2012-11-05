@@ -14,7 +14,6 @@ GNU m4 is an implementation of the traditional Unix macro processor.
 
 %prep
 %setup -q
-%patch1 -p1
 
 %build
 %configure \
