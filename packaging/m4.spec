@@ -6,6 +6,7 @@ Summary:        GNU m4
 Url:            http://www.gnu.org/software/m4/
 Group:          Development/Languages/Other
 Source:         http://ftp.gnu.org/pub/gnu/m4/%{name}-%{version}.tar.bz2
+Source1001: 	m4.manifest
 Provides:       base:/usr/bin/m4
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 
@@ -14,6 +15,7 @@ GNU m4 is an implementation of the traditional Unix macro processor.
 
 %prep
 %setup -q
+cp %{SOURCE1001} .
 
 %build
 %configure \
@@ -29,6 +31,7 @@ make %{?_smp_mflags} check || true
 %make_install
 
 %files
+%manifest %{name}.manifest
 %defattr(-,root,root)
 %doc COPYING
 %{_bindir}/*
