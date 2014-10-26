@@ -1,5 +1,5 @@
 Name:           m4
-Version:        1.4.16
+Version:        1.4.17
 Release:        0
 License:        GPL-3.0+
 Summary:        GNU m4
