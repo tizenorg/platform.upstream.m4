@@ -18,6 +18,9 @@ GNU m4 is an implementation of the traditional Unix macro processor.
 cp %{SOURCE1001} .
 
 %build
+export CFLAGS+=" -fvisibility=hidden"
+  export CXXFLAGS+=" -fvisibility=hidden"
+  
 %configure \
 	    --without-included-regex \
 	    gl_cv_func_isnanl_works=yes \
