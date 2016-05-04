@@ -21,7 +21,10 @@ cp %{SOURCE1001} .
 %configure \
 	    --without-included-regex \
 	    gl_cv_func_isnanl_works=yes \
-	    gl_cv_func_printf_directive_n=yes
+	    gl_cv_func_printf_directive_n=yes \
+	    ac_cv_sys_stack_overflow_works=yes \
+	    ac_cv_sys_xsi_stack_overflow_heuristic=yes
+
 make %{?_smp_mflags}
 
 %check
@@ -37,4 +40,3 @@ make %{?_smp_mflags} check || true
 %{_bindir}/*
 %doc %{_infodir}/*.gz
 %{_mandir}/*/*
-
